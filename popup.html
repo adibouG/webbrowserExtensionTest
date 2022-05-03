@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel="stylesheet" href="myStyles.css" />
+</head>
+<body>
+    <div id="ui">
+        <button id="close">close</button>
+        <div class="links">
+            <h6>Link list :</h6>
+            <ul class="links_list_container" >
+                <li class="links_list">
+                    <a href="http://192.168.96.78:3000" >Open KMS</a>
+                </li>
+            </ul>
+        </div>
+        <div class="settings">
+            <div id="settings1">
+                <label for="pms">PMS :</label>
+                <select id="pms" name="pms">
+                    <option value="mews">Mews</option>
+                    <option value="infor">Infor</option>
+                </select>
+            </div>
+            <div id="settings2">
+                <form id="enzoform">
+                    <label for="input1">Reservation :</label>
+                    <select name="enzoserver" id="enzoserver">
+                        <option value="http://192.168.96.78:3334">server1-remote</option>
+                        <option value="http://localhost:3334"  >server2-local</option>
+                        <option value="http://localhost:3333" selected>server3-local</option>
+                    <select>
+                    <input type="number" name="input1" id="input1" />
+                    <button id="getEnzoData" type="submit" >GET from Enzo</button>
+                </form>
+            </div>
+            <div id="settings3">
+                <label for="getMewsData">Get Mews Data :</label>
+                <button id="getMewsData" name="getMewsData" type="submit" >GET</button>
+            </div>
+        
+        </div>
+        <div class="data_view">
+            <div id="view1" class="textEntry">
+                <h6>Mews retrieved data:</h6>
+                <div id="data_view1"></div>
+            </div>
+
+            <div id="view2" class="textEntry">
+                <h6>Enzo retrieved data:</h6>
+                <div id="data_view2"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+    
+</body>
+</html>

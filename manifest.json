@@ -1,0 +1,21 @@
+{
+    "manifest_version" : 2,
+    "name": "New Extension Test6", 
+    "version": "1.0",  
+    "description": "get, send, retrieve and inject data" ,
+    "browser_action": {
+        "default_icon": "logos/logo_enzosystems.png",  
+        "default_title": "get, send , retrieve and inject data",
+        "default_popup": "popup.html"   
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://demo.mews.li/*"],
+          "js": [ "content_script.js"]
+        }
+      ],
+    "background" : {
+        "scripts": ["background.js"]
+    },
+    "permissions": ["tabs" , "activeTab" ,"https://demo.mews.li/*" , "contextMenus" ,"notifications" , "storage", "cookies"] 
+}
